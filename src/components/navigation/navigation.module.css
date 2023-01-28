@@ -1,0 +1,185 @@
+#dark , #light{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.searchControl > div{
+    position: relative;
+}
+nav input {
+ margin-left: 5rem;
+ position: relative;
+ transform: translateX(-40px);
+ width: 45rem;
+ font-size: 1.5rem;
+ border-radius: 13px;
+ padding-left: 3.2rem;
+}
+.searchIcone{
+    position: absolute;
+    left: 0;
+    transform: translate(15px ,8px );
+    color: aquamarine;
+}
+#light .searchIcone{
+    color: #047857;
+}
+#light input{
+ outline: 0;
+ background-color: #f6f6f6;
+}
+#dark input {
+  background-color: var(--color-Products-dark);
+  color: var(--color-text-white-dark);
+  letter-spacing: 1px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border: 0;
+}
+#dark input:focus{
+    outline: 0;
+    border:1px solid #047857;
+ }
+#light input:focus{
+   border:1px solid #444;
+}
+
+nav ul{
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+nav ul li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sun{
+    color: rgb(255, 247, 0);
+    font-size: 1.9rem;
+    cursor: pointer;
+}
+.moon{
+    color: rgb(59 130 246);
+    font-size: 1.9rem;
+    cursor: pointer;
+}
+.cart{
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#dark .cartIcone{
+   color: #047857;
+}
+#dark .cartIcone:hover{
+    color: #047857;
+    opacity: 1;
+ }
+ #light .cartIcone{
+    color: #047857;
+}
+.active{
+    color: #047857; 
+}
+.span{
+    position:absolute;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    border-radius: 100%;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.75rem;
+    transform: translate(5rem,-1.2rem);
+}
+.hamburger{
+    display: none;
+    color: #444;
+}
+.btn{
+    display: none;
+    border: 0;
+    outline: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#dark .btn{
+   background-color: var(--color-header-dark);
+}
+#light .btn{
+    background-color: #fff;
+}
+@media screen and (max-width:905px){
+    #dark , #light{
+       flex-direction: column;
+       align-items: flex-end;
+       justify-content: space-between;
+    }
+    .searchControl{
+      position: absolute;
+      transform: translate(9.5px ,50px);
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      background-color: #fff;
+    }
+    #dark .searchControl{
+        background-color: var(--color-header-dark);  
+    }
+    .searchControl div{
+        margin: .1rem 0rem 1rem;
+    }
+    nav input {
+    border-radius: 5px;  
+    transform: translateX(-10px);      
+    }
+    .searchIcone{
+        transform: translate(45px ,8px );
+    }
+
+   
+}
+@media screen and (max-width:600px) {
+    .span{
+        transform: translate(3rem,-1.2rem);
+        width: 17px;
+        height: 17px;
+    } 
+    .hamburger{
+        display: inline-block;
+        font-size: 2.3rem;
+        margin-left: .7rem;
+        color: #444;
+    }
+    .Circle{
+        display: inline-block;
+        font-size: 2rem;
+        margin-left: .7rem;
+        color: red;
+    }
+    .btn{
+        display: block;
+        
+    }
+   
+}
+@media screen and (max-width:500px){
+    .searchControl div{
+        display: flex;
+        justify-content: center;
+    }
+    nav input {
+     width: 40rem; 
+}
+}
+@media screen and (max-width:416px){
+    nav input {
+     width: 30rem; 
+}
+}

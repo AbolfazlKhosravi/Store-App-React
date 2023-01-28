@@ -1,0 +1,144 @@
+.controlSignUpPage{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 70rem;
+    height: 40rem;
+    top: 20rem;
+    margin-bottom: 5rem;
+    border-radius: 5px;
+}
+.bgcSaignUp{
+    height: 100%;
+    width: 35%;
+}
+.bgcSaignUp img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 7px 0px 0px 7px;
+}
+.formSignUp{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+     border-radius: 7px 7px;
+    position: relative;
+}
+#dark .formSignUp{
+    background-color: var(--color-footer-dark) !important;
+}
+.formSignUp h2{
+    margin: 2rem 0rem 1rem;
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgb(23, 95, 71);
+}
+.Home{
+    cursor: pointer;
+    font-size: 2.2rem;
+    color: rgb(31, 103, 31);
+    left: 1rem;
+    margin: 1rem;
+}
+.formControl{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+
+height: 85%;
+}
+.formControl > div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.formSignUp p{
+    color: #ccc;
+}
+.formSignUp form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.formSignUp input{
+    padding: 0rem .5rem;
+    font-size: 1.3rem;
+    width: 24rem;
+    height: 3rem;
+    background-color: rgb(245, 255, 252);
+    color: rgb(4, 70, 47);
+    margin-bottom: .5rem;
+   outline: 0;
+   border: 1px solid #ccc;
+   margin-bottom: 1.5rem;
+}
+.btnSign{
+    cursor: pointer;
+    margin: 2rem 1rem 0rem;
+    width: 12rem;
+    height: 2.8rem;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    background-color: rgb(11, 57, 42);
+}
+.formSignUp input:focus{
+    border: 1px solid rgb(14, 70, 14);
+}
+.loginSign{
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 1.1rem;
+    align-items: flex-end;
+    flex-grow: 1;
+    bottom: 1rem;
+}
+.formSignUp .textLogin{
+    margin-bottom: 4rem;
+}
+
+.eye{
+    color: #444;
+    font-size: 1.2rem;
+    position: absolute;
+    transform:  translate(125px,8px);
+    cursor: pointer;
+}
+.error{
+    position: absolute;
+    color: red;
+    font-size: 1.2rem;
+    margin-bottom: .5rem;
+    z-index: 20;
+    transform: translate(80px,8px);
+}
+
+.form div{
+    margin-right: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+}
+
+@media screen and (max-width:730px) {
+    .bgcSaignUp{
+        display: none;
+     }
+     .controlSignUpPage{
+         justify-content: center;
+     }
+     .formSignUp{
+         width: 85%;
+     }
+}

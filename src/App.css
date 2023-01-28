@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+#dark{
+  background-color: var(--color-body-dark);
+}
+#light{
+    background-color: var( --color-body-light);
+}
+#dark p{
+    color: var(--color-text-dark);
+}
+#light p{
+    color: var(--color-text-light);
+}
+.eye{
+    color: #444;
+    font-size: rem2;
+    position: absolute;
+    transform:  translate(390px,8px);
+    cursor: pointer;
+}
+
+@media screen and (max-width:865px) {
+    .eye{
+        transform:  translate(340px,8px);
+    }
+}
+
+@media screen and (max-width:700px) {
+    .eye{
+        transform:  translate(225px,32px);
+    }
+}
+input[type='range']::-webkit-slider-runnable-track {
+	-webkit-appearance: none;
+	box-shadow: none;
+	border: none;
+	background: transparent;
+}
+
+
+
+button:disabled{
+    cursor: not-allowed;
+    opacity: .5;
+}
+
+
+.mySwiper{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 0;
+
+}
+.button-text-slide{
+    position: absolute;
+    transform: translate(80px,-50px);
+    background-color: #ccc;
+    opacity: 0;
+    font-size: 2.5rem;
+    z-index: 5;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+.button-text-slide:hover{
+    opacity: .5;
+}
+.mySwiper :hover  ~  .button-text-slide{
+    opacity: .5;
+}
+.button-prev-slide{
+    position: absolute;
+    transform: translate(20px,-50px);
+    background-color: #ccc;
+    opacity: 0;
+    font-size: 2.5rem;
+    z-index: 5;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+.button-prev-slide:hover{
+    opacity: .5;
+} 
+.mySwiper :hover  ~  .button-prev-slide{
+    opacity: .5;
+}
+
+  
+  

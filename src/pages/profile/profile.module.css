@@ -1,0 +1,239 @@
+.profileControl{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     margin: 2rem ;
+}
+.userControl{
+    background-color: #fff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width: 70%;
+    min-height: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: center;justify-content: center;
+    color: rgb(2, 78, 53);
+    font-size: 4rem;
+    border-radius: 5px;
+}
+#dark .userControl{
+    background-color: var(--color-footer-dark);
+}
+.pleaseLogin{
+    flex-grow: 1;
+    height:34rem;
+}
+.profile{
+    text-align: start;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #fff;
+    padding: 1rem;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+#dark .profile{
+    background-color: var(--color-Products-dark);
+}
+#dark .profile a{
+    color: var(--color-text-dark);
+}
+#dark .profile a:hover{
+  color: #fff;
+}
+.profile div{
+    margin-left: 2rem;
+}
+.profile a{
+    margin-left: 0rem;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #444;
+}
+.text{
+    color: #444;
+}
+.icon{
+    margin-right: .5rem;
+}
+
+.information{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 2rem 3rem; 
+}
+.information button{
+    margin-top: 2rem;
+    width: 10rem;
+    color: #fff;
+    border: 0;
+    background-color: rgb(36, 72, 60);
+    padding: .8rem;
+    border-radius: 5px;
+}
+.information h1{
+     color: rgb(12, 78, 78);
+    font-size: 2.7rem;
+    margin-bottom: 1rem;
+}
+.userData h2{ 
+   font-size: 2.1rem;
+   margin-bottom: 3rem;
+}
+.iconeUser{
+    color: #444;
+}
+.userData div{
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    color: rgb(111, 111, 111);
+    font-size: 1.7rem;
+    width: 100%;
+}
+.userData div span {
+    border: 1px solid #ccc;
+    text-align: left;
+    display: flex;
+   justify-content: flex-start;
+   width: 30rem;
+   padding: .5rem .8rem;
+   margin-left: 4rem;
+}
+.selectImg {
+ display: flex;
+align-items: center;
+width: 100%;   
+}
+.selectImg label{
+ font-size: 1.9rem;
+ margin-left: 2rem;
+ cursor: pointer;
+ color: red;
+}
+.userImgControl{
+    width: 21rem;
+    height: 13rem;
+    margin: 2rem 0rem;
+}
+
+.userImg{
+    object-fit:cover;
+    width: 100%;
+    height: 100%;
+}
+
+label{
+    font-weight: bold;
+    /* margin-bottom: 1rem; */
+}
+input{
+    border: 1px solid #ccc;
+    padding: .5rem 1rem;
+    border-radius: 3px;
+    width: 30rem;
+    height: 3.5rem;
+    margin-left: 4rem;
+    position: relative;
+}
+form div{
+    position: relative;
+}
+.eye{
+    color: #444;
+    font-size: 1.2rem;
+    position: absolute;
+    transform:  translate(-20px,8px);
+    cursor: pointer;
+    background-color: red;
+}
+button{
+    cursor: pointer;
+}
+form .Edite{
+    margin-top: 4rem;
+    height: 3rem;
+    cursor: pointer;
+    width: 8rem;
+}
+
+@media screen and (max-width:865px) {
+    .profile a{
+        font-size: 1.6rem;
+    }
+    .information h1{
+       font-size: 2.3rem;
+   }
+   .userData h2{ 
+      font-size: 1.9rem;
+   }
+   .userImgControl{
+    width: 19rem;
+    height: 11rem;
+}
+input{
+    width: 25rem;
+    height: 3.3rem;
+    font-size: 1.2rem;
+}
+
+}
+
+@media screen and (max-width:700px) {
+   
+    .userData div{
+        margin-top: 1rem;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        
+    }
+    .userData div input{
+        margin-left: 0;
+        margin-top: .5rem;
+    }
+    .selectImg label{
+        font-size: 1.5rem;
+       
+       }
+    .userData div span {
+       width: 30rem;
+       padding: .5rem .8rem;
+       margin-top: .8rem;
+       margin-left: .5rem;
+    }
+
+}
+@media screen and (max-width:600px) {
+    .userControl{
+        width: 90%;
+    }
+    
+
+}
+@media screen and (max-width:470px) {
+    .profile a{
+        font-size: 1.2rem;
+    }
+    .selectImg label{
+        font-size: 1.1rem;
+       
+       }
+       .userData div span {
+        width: 26rem;
+     }
+     .userControl{
+        width: 100%;
+    }
+    .information{
+        padding: 2rem 1rem; 
+    }
+
+}

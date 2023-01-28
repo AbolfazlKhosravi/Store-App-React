@@ -1,0 +1,119 @@
+header{
+   display: flex;
+   flex-direction: column;
+   position: relative;
+   position: sticky;
+   top: 0;
+   z-index: 10;
+   
+}
+#dark{
+    background-color: var(--color-body-dark);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+#light{
+     box-shadow: rgba(255, 255, 255, 0.2) 0px 8px 24px;
+   background-color: var(--color-header-light);
+}
+.iconWeb{
+    font-size: 2.6rem;
+    cursor: pointer;
+}
+.headerControl{
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: #115e59;
+    padding: 1.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    
+}
+.headerScrol{
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    margin-top: 6.7rem;
+    z-index: 10;
+}
+#dark .headerScrol{
+    background-color: var(--color-body-dark);
+ }
+#light .headerScrol{
+    background-color: var(--color-header-light);
+}
+.article{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+a{
+    margin-left: 3rem;
+    font-size: 1.8rem;
+    padding: .3rem .5rem;  
+}
+#dark a{
+    color: var(--color-text-dark);
+ }
+#light a{
+    color: var(--color-text-light);
+}
+#dark a:hover{
+    color: #fff;
+}
+#light a:hover{
+    color: #115e59;
+}
+.title{
+    cursor: pointer;
+    font-size: 2.5rem;
+}
+.active{
+    border-radius: 5px; 
+}
+@media screen and (max-width:906px){
+    header{
+        margin-bottom:4rem;
+        
+     }
+}
+@media screen and (max-width:600px) {
+    .title{
+        font-size: 2.3rem;
+    }
+    a{
+        font-size: 1.7rem;
+        margin-left: 1rem;
+    }
+    .active{
+      display: none;
+    }
+    .lickControl{
+        display: none;
+    }
+    .headerScrol{
+        font-weight: bold;
+        font-size: 1.8rem;
+        padding: 1.5rem 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        transition: all .3s ease-in-out;
+        position: absolute;
+        margin-top: 6.6rem;
+        width: 100%;
+        height: 9rem;
+        opacity: 1;
+    }
+    .scrolControl{
+        height: 0;
+        opacity: 0;
+        width: 100%;
+        position: absolute;
+        margin-top: 6.7rem;
+    }
+}
