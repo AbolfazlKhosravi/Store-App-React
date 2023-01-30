@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { FaPlusCircle } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { useCart, useCartActions } from "../../provider/provider";
-import { addToCart } from "../../utils/addToCart";
+import { checkInCart } from "../../utils/checkInCart";
 import styles from "./campSuppliesList.module.css";
 import { useTheme } from "../../provider/themeMode";
 import { products } from "../../data";
@@ -64,9 +64,9 @@ const CampSuppliesList = () => {
                     ) : (
                       <p>$ {product.price}</p>
                     )}
-                    {addToCart(cart, product) ? (
+                    {checkInCart(cart, product) ? (
                       <button className={`${styles.btn} ${styles.btnPrimary}`}>
-                       {addToCart(cart, product).quantity}
+                       {checkInCart(cart, product).quantity}
                       </button>
                     ) : (
                       <button

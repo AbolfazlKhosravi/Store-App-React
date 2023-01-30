@@ -2,7 +2,7 @@ import Layout from "../../layout/layout";
 import { products } from "../../data";
 import styles from "./campSuppliesPage.module.css";
 import { useNavigate } from "react-router-dom";
-import { addToCart } from "../../utils/addToCart";
+import { checkInCart } from "../../utils/checkInCart";
 import { toast } from "react-hot-toast";
 import { useCart, useCartActions } from "../../provider/provider";
 import { FaPlusCircle } from "react-icons/fa";
@@ -59,9 +59,9 @@ const CampSuppliesPage = () => {
                     ) : (
                       <p>$ {product.price}</p>
                     )}
-                    {addToCart(cart, product) ? (
+                    {checkInCart(cart, product) ? (
                       <button className={`${styles.btn} ${styles.btnPrimary}`}>
-                        1
+                        {checkInCart(cart, product).quantity}
                       </button>
                     ) : (
                       <button

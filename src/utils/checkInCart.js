@@ -1,4 +1,4 @@
-export const addToCart=(cart,product)=>{
+export const checkInCart=(cart,product)=>{
   return cart.find(c=>c.id===product.id)
  
 }

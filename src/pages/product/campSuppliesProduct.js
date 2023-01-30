@@ -10,7 +10,7 @@ import {
   FaUserAlt,
 } from "react-icons/fa";
 import { BsFillBagCheckFill } from "react-icons/bs";
-import { addToCart } from "../../utils/addToCart";
+import { checkInCart } from "../../utils/checkInCart"; 
 import { useCart, useCartActions } from "../../provider/provider";
 import { useEffect, useRef, useState } from "react";
 import React from "react";
@@ -21,7 +21,7 @@ const CampSuppliesProduct = () => {
   const { cart } = useCart();
   const params = useParams();
   const product = products.campSupplies.find((p) => p.id == params.id);
-  const newproduct = addToCart(cart, product);
+  const newproduct = checkInCart(cart, product);
   const [selectRadio, setSelectRadio] = useState(null);
   const theme = useTheme();
   const dispatch = useCartActions();
@@ -192,7 +192,7 @@ const CampSuppliesProduct = () => {
                   <h4>${product.offPrice}</h4>
                 </div>
               )}
-              {addToCart(cart, product) ? (
+              {checkInCart(cart, product) ? (
                 <div className={styles.goTOCart}>
                   <p>in your cart</p>
                   <p>

@@ -2,7 +2,7 @@ import Layout from "../../layout/layout";
 import { products } from "../../data";
 import styles from "./shoesPage.module.css";
 import { useNavigate } from "react-router-dom";
-import { addToCart } from "../../utils/addToCart";
+import { checkInCart } from "../../utils/checkInCart"; 
 import { toast } from "react-hot-toast";
 import { useCart, useCartActions } from "../../provider/provider";
 import { FaPlusCircle } from "react-icons/fa";
@@ -13,7 +13,6 @@ const ShoesPage = () => {
   const navigate = useNavigate();
   const theme = useTheme();
   const [filteredProducts, setFilteredProducts] = useState(products.shoes);
-  // const addToCart=;
   const { cart } = useCart();
   const dispatch = useCartActions();
   const addToCartHandlr = (e, product) => {
@@ -57,9 +56,9 @@ const ShoesPage = () => {
                     ) : (
                       <p>$ {product.price}</p>
                     )}
-                    {addToCart(cart, product) ? (
+                    {checkInCart(cart, product) ? (
                       <button className={`${styles.btn} ${styles.btnPrimary}`}>
-                        1
+                        {checkInCart(cart, product).quantity}
                       </button>
                     ) : (
                       <button
