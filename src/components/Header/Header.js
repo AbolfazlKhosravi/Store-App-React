@@ -9,7 +9,6 @@ const Header = () => {
   const navigate = useNavigate();
   const [isShow, setIsShow] = useState(false);
   const theme = useTheme();
-  console.log(theme);
   return (
     <header id={styles[theme]}>
       <section className={styles.headerControl}>

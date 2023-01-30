@@ -8,7 +8,6 @@ function valuetext(value) {
   return `${value}°C`;
 }
 const ShoesFilter = ({ setFilteredProducts,slicePricucts }) => {
-  console.log(slicePricucts);
   const [inputValue, setInputValue] = useState("");
   const [value, setValue] = useState([0, 300]);
   const theme=useTheme()

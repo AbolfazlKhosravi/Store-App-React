@@ -10,7 +10,6 @@ let initialCart = {
 
 initialCart = JSON.parse(localStorage.getItem("cart")) || initialCart;
 const Provider = ({ children }) => {
-  console.log(initialCart);
   const [cart, dispatch] = useReducer(cartReducer, initialCart);
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
