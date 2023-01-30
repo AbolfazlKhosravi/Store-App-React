@@ -66,7 +66,7 @@ const CampSuppliesList = () => {
                     )}
                     {addToCart(cart, product) ? (
                       <button className={`${styles.btn} ${styles.btnPrimary}`}>
-                        1
+                       {addToCart(cart, product).quantity}
                       </button>
                     ) : (
                       <button
