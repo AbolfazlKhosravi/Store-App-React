@@ -17,6 +17,7 @@ const Navigation = ({ setIsShow, isShow }) => {
   const [inputValue,setInputValue]=useState("");
   const [searchValue,setSerchValue]=useState("")
   const navigate=useNavigate();
+ 
   useEffect(()=>{
    const value= JSON.parse(localStorage.getItem("valueSerch"))||"";
    setInputValue(value)
@@ -31,6 +32,11 @@ const Navigation = ({ setIsShow, isShow }) => {
     navigate(`/${searchValue}`)
    }
   }
+  const numbersCart=()=>{
+    return cart.reduce((crr,acu)=>{
+       return parseFloat(crr)+parseFloat(acu.quantity)
+     },0)
+   }
   return (
     <nav id={styles[theme]}>
       <div className={styles.searchControl}>
@@ -51,7 +57,7 @@ const Navigation = ({ setIsShow, isShow }) => {
         </li>
         <li>
           <div className={styles.cart}>
-            <span className={styles.span}>{cart.length}</span>
+           {cart.length? <span className={styles.span}>{cart.length?numbersCart():0}</span>:""}
             <NavLink
               to="/cart"
               className={(activ) => (activ.isActive ? styles.active : "")}
