@@ -43,7 +43,7 @@ const Cart = () => {
               {cart.map((item) => (
                 <div  className={styles.itemControl} key={item.id}>
                   <div className={styles.itemDis}>
-                    <div onClick={()=>navigate(`/products/shoes/${item.id}`)} className={styles.imgDis}>
+                    <div onClick={()=>navigate(`/products/${item.size? "shoes":"campSupplies"}/${item.id}`)} className={styles.imgDis}>
                       <img src={item.image} alt={item.name} />
                     </div>
                     <div className={styles.textDis}>
