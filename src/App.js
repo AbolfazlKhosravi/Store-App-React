@@ -4,14 +4,15 @@ import Provider from "./provider/provider";
 import routes from "./routes";
 import { Toaster } from "react-hot-toast";
 import AuthProvider from "./provider/AuthProvider";
-import  { useTheme } from "./provider/themeMode";
+import { useTheme } from "./provider/themeMode";
 import ScrollToTop from "./utils/ScrolToTop";
 function App() {
-  const theme=useTheme();
+  const theme = useTheme();
   return (
-    <div id={theme}>
-      <ScrollToTop/>
-      <Toaster />
+    <div id={theme} className="containerControls">
+      <div className="container">
+        <ScrollToTop />
+        <Toaster />
         <AuthProvider>
           <Provider>
             <Routes>
@@ -25,6 +26,7 @@ function App() {
             </Routes>
           </Provider>
         </AuthProvider>
+      </div>
     </div>
   );
 }
