@@ -5,6 +5,12 @@
     text-decoration: none;
     list-style: none;
 }
+.layouy{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 .containerControls{
     display: flex;
     justify-content: center;

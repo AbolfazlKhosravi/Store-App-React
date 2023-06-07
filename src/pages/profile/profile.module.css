@@ -2,8 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: start;
-     margin: 2rem 2rem 2rem;
-     min-height: 65vh;
+     margin: 2rem;
 }
 .userControl{
     background-color: #fff;
@@ -166,10 +165,6 @@ form .Edite{
 }
 
 @media screen and (max-width:865px) {
-    .profileControl{
-        margin: 10rem 2rem 0rem;
-        min-height: 61vh;
-   }
     .profile a{
         font-size: 1.6rem;
     }
@@ -224,9 +219,6 @@ input{
 
 }
 @media screen and (max-width:470px) {
-    .profileControl{
-         margin: 5rem 2rem 2rem;
-    }
     .profile a{
         font-size: 1.2rem;
     }
