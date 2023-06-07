@@ -29,6 +29,7 @@ font-size: 4.5rem;
 }
 .productControl::-webkit-scrollbar {
      cursor: pointer;
+     height: 15px;
   }
 .productControl::-webkit-scrollbar-track {
     background: #ffffff;
