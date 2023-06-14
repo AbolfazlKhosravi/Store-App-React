@@ -1,7 +1,7 @@
 const cartReducer=(state,action)=>{
     switch (action.type) {
         case "Add_to_Cart":{ 
-            const index=state.cart.findIndex(t=>t.id==action.payload.id);
+            const index=state.cart.findIndex(t=>parseInt(t.id)===parseInt(action.payload.id));
             if(index>=0){
                 const product={...state.cart[index]}
                 product.quantity++;
