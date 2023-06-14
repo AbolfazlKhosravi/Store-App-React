@@ -1,4 +1,4 @@
-import { json, NavLink, useNavigate } from "react-router-dom";
+import {  NavLink, useNavigate } from "react-router-dom";
 import { useCart } from "../../provider/provider";
 import styles from "./navigation.module.css";
 import { useAuth } from "../../provider/AuthProvider";
@@ -6,7 +6,7 @@ import { FaCartPlus, FaUserAlt, FaRegTimesCircle } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FiSun, FiMoon } from "react-icons/fi";
 import { useTheme, useThemeActions } from "../../provider/themeMode";
-import { useEffect, useState, useTransition } from "react";
+import { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 
 const Navigation = ({ setIsShow, isShow }) => {

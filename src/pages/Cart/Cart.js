@@ -1,6 +1,5 @@
 import { useCart, useCartActions } from "../../provider/provider";
-import { useEffect } from "react";
-import { FaAngleUp, FaAngleDown, FaTrashAlt } from "react-icons/fa";
+import { FaTrashAlt } from "react-icons/fa";
 import styles from "./Cart.module.css";
 import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";

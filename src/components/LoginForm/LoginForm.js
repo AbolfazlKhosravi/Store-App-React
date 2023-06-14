@@ -38,7 +38,7 @@ const LoginForm = () => {
   const theme = useTheme();
   useEffect(() => {
     if (auth) navigate(redirect);
-  }, [auth, redirect]);
+  }, [auth, redirect,navigate]);
   console.log(redirect);
   const onSubmit = (values) => {
     LoginUser(values)

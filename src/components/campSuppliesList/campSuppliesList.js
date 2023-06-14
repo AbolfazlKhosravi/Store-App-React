@@ -52,7 +52,7 @@ const CampSuppliesList = () => {
                   key={product.id}
                 >
                   <div className={styles.productsImg}>
-                    <img src={product.image} />
+                    <img src={product.image} alt={product.image}/>
                   </div>
                   <div className={styles.productDes}>
                     <p>{product.name}</p>

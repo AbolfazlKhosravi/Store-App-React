@@ -1,7 +1,7 @@
 import { useAuth, useAuthActions } from "../../../provider/AuthProvider";
 import user from "../../../image/user.jpg";
 import styles from "../profile.module.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { FiEye, FiEyeOff } from "react-icons/fi";
 import { toast } from "react-hot-toast";
 const EditInformation = () => {

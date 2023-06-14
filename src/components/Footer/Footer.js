@@ -15,14 +15,14 @@ const Footer = () => {
             <div className={styles.Contactus}>
                  <div className={styles.getApp}>
                     <p>GET OUR APP</p>
-                    <a href="#"><img src={App} alt=""/></a>
+                    <a href="# "><img src={App} alt=""/></a>
                  </div>
                 <div className={styles.icons}>
-                   <a href="#"><FaTwitter className={styles.icon}/></a>
-                   <a href="#"><FaFacebookF className={styles.icon}/></a>
-                   <a href="#"><FaInstagram className={styles.icon}/></a>
-                   <a href="#"><FaTiktok className={styles.icon}/></a>
-                   <a href="#"><FaYoutube className={styles.icon}/></a> 
+                   <a href="# "><FaTwitter className={styles.icon}/></a>
+                   <a href="# "><FaFacebookF className={styles.icon}/></a>
+                   <a href="# "><FaInstagram className={styles.icon}/></a>
+                   <a href="# "><FaTiktok className={styles.icon}/></a>
+                   <a href="# "><FaYoutube className={styles.icon}/></a> 
                 </div>
                 <p className={styles.verson}>KHA 1.0.0</p>
             </div>

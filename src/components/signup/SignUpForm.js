@@ -34,7 +34,7 @@ const SignUpForm = () => {
   const theme = useTheme();
   useEffect(()=>{
     if(auth) navigate(redirect)
-  },[auth,redirect])
+  },[auth,redirect,navigate])
   const onSubmit=(values)=>{
     signUpUser(values).then((res)=>{
       setAuth({...res.data,password:values.password})

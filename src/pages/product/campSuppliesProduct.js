@@ -1,5 +1,5 @@
 import Layout from "../../layout/layout";
-import { Link, NavLink, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { products } from "../../data";
 import styles from "./campSuppliesProduct.module.css";
 import {
@@ -12,7 +12,7 @@ import {
 import { BsFillBagCheckFill } from "react-icons/bs";
 import { checkInCart } from "../../utils/checkInCart"; 
 import { useCart, useCartActions } from "../../provider/provider";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import React from "react";
 import { toast } from "react-hot-toast";
 import { useTheme } from "../../provider/themeMode";
@@ -20,7 +20,7 @@ import { useAuth } from "../../provider/AuthProvider";
 const CampSuppliesProduct = () => {
   const { cart } = useCart();
   const params = useParams();
-  const product = products.campSupplies.find((p) => p.id == params.id);
+  const product = products.campSupplies.find((p) => parseInt(p.id) === parseInt(params.id));
   const newproduct = checkInCart(cart, product);
   const [selectRadio, setSelectRadio] = useState(null);
   const theme = useTheme();
@@ -53,22 +53,24 @@ const CampSuppliesProduct = () => {
       },
     });
   };
+
   useEffect(()=>{
   const values=  JSON.parse(localStorage.getItem(`comment${product.name}${product.id}`))||product.comments;
   setComments(values)
-  },[])
+  },[product])
+
   useEffect(()=>{
     if(local){
-      localStorage.setItem(`comment${product.name}${product.id}`,JSON.stringify(comments))
+     return localStorage.setItem(`comment${product.name}${product.id}`,JSON.stringify(comments))
     }
-  },[comments])
+  },[comments,local,product])
 
   return (
     <Layout>
       <section className={styles.product} id={styles[theme]}>
         <div className={styles.productControl}>
           <div className={styles.productImg}>
-            <img src={product.image} />
+            <img src={product.image} alt={product.image}  />
           </div>
           <div className={styles.productDes}>
             <h2>{product.name}</h2>
@@ -123,8 +125,8 @@ const CampSuppliesProduct = () => {
                   />
                   <label style={{ backgroundColor: c }} htmlFor={c}>
                     {newproduct
-                      ? newproduct.selectRadio == c && <FaCheck />
-                      : selectRadio == c && <FaCheck />}
+                      ? newproduct.selectRadio === c && <FaCheck />
+                      : selectRadio === c && <FaCheck />}
                   </label>
                 </React.Fragment>
               ))}

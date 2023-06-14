@@ -2,24 +2,26 @@ import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
 import { useEffect, useState } from "react";
 import { products } from "../../data";
-import styles from"./ShoesFilter.module.css";
+import styles from "./ShoesFilter.module.css";
 import { useTheme } from "../../provider/themeMode";
 function valuetext(value) {
   return `${value}°C`;
 }
-const ShoesFilter = ({ setFilteredProducts,slicePricucts }) => {
+const ShoesFilter = ({ setFilteredProducts, slicePricucts }) => {
   const [inputValue, setInputValue] = useState("");
   const [value, setValue] = useState([0, 300]);
-  const theme=useTheme()
+  const theme = useTheme();
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
   useEffect(() => {
-    let result = slicePricucts||products.shoes;
+    let result = slicePricucts || products.shoes;
     result = search(result);
     result = rengePrice(result);
     setFilteredProducts(result);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [inputValue, value]);
+
   const sercchHandler = (e) => {
     setInputValue(e.target.value);
   };
@@ -41,7 +43,7 @@ const ShoesFilter = ({ setFilteredProducts,slicePricucts }) => {
         placeholder="search for ..."
       />
       <div>
-        <h3 style={{marginLeft:"2rem"}}>more filter</h3>
+        <h3 style={{ marginLeft: "2rem" }}>more filter</h3>
         <div className={styles.productControlPrice}>
           <Box sx={{ width: 180 }}>
             <Slider

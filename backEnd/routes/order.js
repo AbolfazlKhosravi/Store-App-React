@@ -41,6 +41,7 @@ router.post(
     // calculate total price from back-end :
     let totalPrice = 0;
     for (let item of req.body.orderItems) {
+      // eslint-disable-next-line no-undef
       const currItem = await Products.findById(item.product);
       totalPrice =
         totalPrice + parseInt(item.quantity) * parseInt(currItem.offPrice);

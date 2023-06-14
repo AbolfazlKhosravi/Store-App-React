@@ -3,7 +3,7 @@ import styles from "./header.module.css";
 import { useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
-import { IconName,FaStoreAlt } from "react-icons/fa";
+import { FaStoreAlt } from "react-icons/fa";
 import { useTheme } from "../../provider/themeMode";
 const Header = () => {
   const navigate = useNavigate();

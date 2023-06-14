@@ -2,23 +2,24 @@ import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
 import { useEffect, useState } from "react";
 import { products } from "../../data";
-import styles from"./campSuppliesFilter.module.css";
+import styles from "./campSuppliesFilter.module.css";
 import { useTheme } from "../../provider/themeMode";
 function valuetext(value) {
   return `${value}°C`;
 }
-const CampSuppliesFilter = ({ setFilteredProducts,slicePricucts }) => {
+const CampSuppliesFilter = ({ setFilteredProducts, slicePricucts }) => {
   const [inputValue, setInputValue] = useState("");
   const [value, setValue] = useState([0, 300]);
-  const theme=useTheme()
+  const theme = useTheme();
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
   useEffect(() => {
-    let result = slicePricucts||products.campSupplies;
+    let result = slicePricucts || products.campSupplies;
     result = search(result);
     result = rengePrice(result);
     setFilteredProducts(result);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [inputValue, value]);
   const sercchHandler = (e) => {
     setInputValue(e.target.value);
@@ -41,7 +42,7 @@ const CampSuppliesFilter = ({ setFilteredProducts,slicePricucts }) => {
         placeholder="search for ..."
       />
       <div>
-        <h3 style={{marginLeft:"2rem"}}>more filter</h3>
+        <h3 style={{ marginLeft: "2rem" }}>more filter</h3>
         <div className={styles.productControlPrice}>
           <Box sx={{ width: 180 }}>
             <Slider

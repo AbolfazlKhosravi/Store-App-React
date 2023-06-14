@@ -1,11 +1,7 @@
-import { useEffect, useState } from "react";
 import {
   NavLink,
   Route,
   Routes,
-  useNavigate,
-  useParams,
-  useSearchParams,
 } from "react-router-dom";
 import Layout from "../../layout/layout";
 import { useAuth } from "../../provider/AuthProvider";
@@ -15,8 +11,6 @@ import styles from "./profile.module.css";
 import { FaInfoCircle, FaUserEdit } from "react-icons/fa";
 import { useTheme } from "../../provider/themeMode";
 const ProfilePage = () => {
-  const dataUser = useAuth();
-  const navigate = useNavigate();
   const userData = useAuth();
   const theme=useTheme()
   console.log(userData);

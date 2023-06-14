@@ -12,10 +12,6 @@ const cartReducer=(state,action)=>{
               const updateCart=[...state.cart,{...action.payload,quantity:1}];
               return {...state,cart:updateCart,total:state.total+parseFloat(action.payload.offPrice)};
             }}
-        // case "REMOVE_Cart":{
-        //     const updateCart=state.cart.filter(item=>item.id!==action.payload.id);
-        //     return {...state,cart:updateCart,total:state.total-action.payload.offPrice*action.payload.quantity}
-        // }
         case "DECREMENT_Cart":{
              const index=state.cart.findIndex(t=>t.id ===action.payload.id);
              const product={...state.cart[index]};
